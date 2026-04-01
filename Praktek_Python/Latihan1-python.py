@@ -11,6 +11,7 @@ print(x)
 if 6 > 3 :
      print("Enam Lebih Besar dari Tiga")
 
+y = 2
 if x > 5 :
      print("Nilai x lebih dari 5")
      if y < 10:
