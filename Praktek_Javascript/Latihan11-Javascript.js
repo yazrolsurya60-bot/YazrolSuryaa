@@ -1,4 +1,4 @@
 const maxScore = 100;
 console.log(maxScore);
-maxScore = 200;
+maxScore = 250;
 console.log(maxScore);
