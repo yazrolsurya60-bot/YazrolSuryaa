@@ -1,4 +1,4 @@
-let score = 10;
+let score = 50;
 console.log(score); // Output : 10
-score = 20;
+score = 100;
 console.log(score); // Output : 20
