@@ -1,4 +1,4 @@
 let age;
 console.log(age);
-age = 25;
+age = 100;
 console.log(age);
