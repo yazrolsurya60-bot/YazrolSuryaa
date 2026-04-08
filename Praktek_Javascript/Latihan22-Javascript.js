@@ -6,3 +6,5 @@ let b = 2; // Another statement starts here
 
 console.log(variableOne);
 console.log(variableTwo);
+
+console.log(a);
