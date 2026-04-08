@@ -8,3 +8,4 @@ console.log(variableOne);
 console.log(variableTwo);
 
 console.log(a);
+console.log(b);
