@@ -48,7 +48,16 @@
       const action = key.dataset.action;
 
       if (!action) {
-        console.log('number key!')
+        console.log("number key!");
+      }
+
+      if (
+        action === "add" ||
+        action === "subtract" ||
+        action === "multiply" ||
+        action === "divide"
+      ) {
+        consol.log("operator key!");
       }
     </script>
   </body>
