@@ -97,22 +97,13 @@
           ) {
             key.classList.add("is-depressed");
           }
-        }
-      });
-
-      const display = document.querySelector(".calculator__display");
-
-      keys.addEventListener("click", (e) => {
-        if (e.target.matches("button")) {
-          const key = e.target;
-          // ...
-
           // Remove .is-depressed class from all keys
           Array.from(key.parentNode.children).forEach((k) =>
             k.classList.remove("is-depressed"),
           );
         }
       });
+      const display = document.querySelector(".calculator__display");
     </script>
   </body>
 </html>
