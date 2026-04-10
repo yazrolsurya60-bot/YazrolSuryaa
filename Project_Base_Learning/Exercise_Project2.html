@@ -103,7 +103,27 @@
           ) {
             key.classList.add("is-depressed");
           }
+
+          if (
+            action === "add" ||
+            action === "subtract" ||
+            action === "multiply" ||
+            action === "divide"
+          ) {
+            key.classList.add("is-depressed");
+            // Add custom attribute
+            calculator.dataset.previousKeyType = "operator";
+          }
+          {
+            key.classList.add("is-depressed");
+            // Add custom attribute
+            calculator.dataset.previousKeyType = "operator";
+          }
         }
+        // Remove .is-depressed class from all keys
+        Array.from(key.parentNode.children).forEach((k) =>
+          k.classList.remove("is-depressed"),
+        );
       });
     </script>
   </body>
