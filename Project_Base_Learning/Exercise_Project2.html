@@ -20,6 +20,11 @@
         /* 4. Opsional: Memastikan tombol mengisi ruang yang tersedia */
         align-items: stretch;
       }
+
+      button.is-depressed {
+        background-color: #999 !important;
+        color: white;
+      }
     </style>
   </head>
   <body>
@@ -99,10 +104,6 @@
             key.classList.add("is-depressed");
           }
         }
-        // Remove .is-depressed class from all keys
-        Array.from(key.parentNode.children).forEach((k) =>
-          k.classList.remove("is-depressed"),
-        );
       });
     </script>
   </body>
