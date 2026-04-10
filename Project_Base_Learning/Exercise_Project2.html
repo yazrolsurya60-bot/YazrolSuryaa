@@ -106,16 +106,6 @@
             action === "divide"
           ) {
             key.classList.add("is-depressed");
-          }
-
-          if (
-            action === "add" ||
-            action === "subtract" ||
-            action === "multiply" ||
-            action === "divide"
-          ) {
-            key.classList.add("is-depressed");
-            // Add custom attribute
             calculator.dataset.previousKeyType = "operator";
           }
         }
