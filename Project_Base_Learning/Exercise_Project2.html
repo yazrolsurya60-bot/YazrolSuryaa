@@ -62,6 +62,10 @@
           const keyContent = key.textContent;
           const displayedNum = display.textContent;
 
+          Array.from(key.parentNode.children).forEach((k) =>
+            k.classList.remove("is-depressed"),
+          );
+
           if (!action) {
             console.log("number key!");
           }
@@ -120,10 +124,6 @@
             calculator.dataset.previousKeyType = "operator";
           }
         }
-        // Remove .is-depressed class from all keys
-        Array.from(key.parentNode.children).forEach((k) =>
-          k.classList.remove("is-depressed"),
-        );
       });
     </script>
   </body>
