@@ -84,7 +84,7 @@
         }
       });
 
-      if (!actio) {
+      if (!action) {
         if (displayedNum === 0) {
           display.textContent = keyContent;
         }
@@ -109,6 +109,60 @@
         action === "divide"
       ) {
         key.classList.add("is-depressed");
+      }
+
+      keys.addEventListener("click", (e) => {
+        if (e.target.matches("button")) {
+          // ...
+
+          // Remove .is-deppressed class from all keys
+          Array.from(key.parentNode.children).forEach((k) =>
+            k.classList.remove("is-depressed"),
+          );
+        }
+      });
+
+      keys.addEventListener("click", (e) => {
+        if (e.target.matches("button")) {
+          // ...
+
+          if (
+            action === "add" ||
+            action === "substract" ||
+            action === "multiply" ||
+            action === "divide"
+          ) {
+            key.classList.add("is-depressed");
+            // add custom attribute
+            calculator.dataset.previouslyKeyType = "operator";
+          }
+        }
+      });
+
+      const previouslyKeyType = calculator.dataset.previouslyKeyType;
+
+      if (!action) {
+        if (displayedNum === "0" || previouslyKeyType === "operator") {
+          displaye.textContent = keyContent;
+        } else {
+          displa.textContent = displayedNum + keyContent;
+        }
+      }
+
+      if (action === "calculate") {
+        const secondValue = displayedNu;
+        // ...
+      }
+
+      if (
+        action === "add" ||
+        action === "substract" ||
+        action === "multiply" ||
+        action === "divide"
+      ) {
+        // ...
+        calculator.dataset.firstValue = displayedNum;
+        calculator.dataset.operator = action;
       }
     </script>
   </body>
