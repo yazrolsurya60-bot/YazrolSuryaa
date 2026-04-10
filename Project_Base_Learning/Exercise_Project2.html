@@ -40,12 +40,10 @@
 
       keys.addEventListener("click", (e) => {
         if (e.target.matches("button")) {
-          // do something
+          const key = e.target;
+          const action = key.dataset.action;
         }
       });
-
-      const key = e.target;
-      const action = key.dataset.action;
 
       if (!action) {
         console.log("number key!");
@@ -57,113 +55,10 @@
         action === "multiply" ||
         action === "divide"
       ) {
-        consol.log("operator key!");
+        console.log("operator key!");
       }
 
-      if (action === "decimal") {
-        console.log("decimal key!");
-      }
-
-      if (actio === "clear") {
-        console.log("clear key!");
-      }
-
-      if (action === "calculate") {
-        console.log("equal key!");
-      }
-
-      const display = document.querySelector(".calculator__display");
-
-      keys.addEventListener("click", (e) => {
-        if (e.target.matches("button")) {
-          const key = e.target;
-          const action = key.dataset.action;
-          const keyContent = key.textContent;
-          const displayedNum = display.textContent;
-          // ...
-        }
-      });
-
-      if (!action) {
-        if (displayedNum === 0) {
-          display.textContent = keyContent;
-        }
-      }
-
-      if (!action) {
-        if (displayedNum === "0") {
-          display.textContent = keyContent;
-        } else {
-          display.textContent = displayedNum + keyContent;
-        }
-      }
-
-      if (action === "decimal") {
-        display.textContent = displayedNum;
-      }
-
-      if (
-        action === "add" ||
-        action === "subtract" ||
-        action === "multiply" ||
-        action === "divide"
-      ) {
-        key.classList.add("is-depressed");
-      }
-
-      keys.addEventListener("click", (e) => {
-        if (e.target.matches("button")) {
-          // ...
-
-          // Remove .is-deppressed class from all keys
-          Array.from(key.parentNode.children).forEach((k) =>
-            k.classList.remove("is-depressed"),
-          );
-        }
-      });
-
-      keys.addEventListener("click", (e) => {
-        if (e.target.matches("button")) {
-          // ...
-
-          if (
-            action === "add" ||
-            action === "substract" ||
-            action === "multiply" ||
-            action === "divide"
-          ) {
-            key.classList.add("is-depressed");
-            // add custom attribute
-            calculator.dataset.previouslyKeyType = "operator";
-          }
-        }
-      });
-
-      const previouslyKeyType = calculator.dataset.previouslyKeyType;
-
-      if (!action) {
-        if (displayedNum === "0" || previouslyKeyType === "operator") {
-          displaye.textContent = keyContent;
-        } else {
-          displa.textContent = displayedNum + keyContent;
-        }
-      }
-
-      if (action === "calculate") {
-        const secondValue = displayedNu;
-        // ...
-      }
-
-      if (
-        action === "add" ||
-        action === "substract" ||
-        action === "multiply" ||
-        action === "divide"
-      ) {
-        // ...
-        calculator.dataset.firstValue = displayedNum;
-        calculator.dataset.operator = action;
-      }
+      
     </script>
   </body>
 </html>
